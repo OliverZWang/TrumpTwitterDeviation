@@ -48,7 +48,7 @@ class TrendPageScraper():
 
 if __name__ == '__main__':
     #testing
-    scraper = TrendPageScraper('https://us.trend-calendar.com/trend/2020-06-28.html', "./2020-06-28-twitter.txt", "./2020-06-28-google.txt")
+    scraper = TrendPageScraper('https://us.trend-calendar.com/trend/2020-06-28.html', "./2020-06-28-twitter.csv", "./2020-06-28-google.csv")
     # print(scraper.twitter_trends)
     # print(scraper.google_trends)
 
