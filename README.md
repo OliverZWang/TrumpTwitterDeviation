@@ -3,7 +3,7 @@
 ## General Project Information
 
 ### Project Description
-This project attempts to identify a pattern of President Trump's tweets where he deviates from current major events such as the COVID-19 pandemic, the Black Lives Matter Movement, etc. We plan to compare topics of Trump's tweets to major news events as well as twitter trends at the time. Our aim is to analyze how the subjects he chooses to focus on deviates from current events. We will also create visualizations to demonstrate how freqently the content of his tweets deviates from the focus of mainstream media and other twitter users. 
+This project attempts to identify a pattern of President Trump's tweets where he deviates from current major events such as the COVID-19 pandemic, the Black Lives Matter Movement, etc. We plan to compare topics of Trump's tweets to major news events as well as twitter trends at the time. Our aim is to analyze how the subjects he chooses to focus on deviates from current events. We will also create visualizations to demonstrate how frequently the content of his tweets deviates from the focus of mainstream media and other twitter users. 
 
 ### Typical User
 - Political enthusiasts
