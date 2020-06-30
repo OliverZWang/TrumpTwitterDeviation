@@ -8,11 +8,14 @@ from TrendPageScraper import TrendPageScraper
 def main():
 
     mkdir_if_not_exist("trends_data")
+    mkdir_if_not_exist("./trends_data/twitter")
+    mkdir_if_not_exist("./trends_data/google")
     date_range = pd.date_range(start="2016-01-10", end="2020-06-28")
     url_prefix = "https://us.trend-calendar.com/trend/"
     url_suffix = ".html"
 
-    path_prefix = "./trends_data/"
+    path_prefix_twitter = "./trends_data/twitter/"
+    path_prefix_google = "./trends_data/google/"
     path_suffix_twitter = "-twitter.csv"
     path_suffix_google = "-google.csv"
 
@@ -21,13 +24,13 @@ def main():
         # print(date)
 
         # make the directory for this date
-        mkdir_if_not_exist("trends_data/"+date)
+        # mkdir_if_not_exist("trends_data/"+date)
 
         url = url_prefix + date + url_suffix
         # print(url)
 
-        path_twitter = path_prefix + date + "/" + date + path_suffix_twitter
-        path_google = path_prefix + date + "/" + date + path_suffix_google
+        path_twitter = path_prefix_twitter + date + path_suffix_twitter
+        path_google = path_prefix_google + date + path_suffix_google
         # print(path_twitter)
         # print(path_google)
         # print()
