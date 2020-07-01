@@ -2,3 +2,4 @@ venv
 .idea
 __pycache__/
 .env
+trends_scraper/trends_data
