@@ -8,6 +8,6 @@ javac -classpath `yarn classpath`:. -d . Clean.java
 jar -cvf Clean.jar *.class
 
 hdfs dfs -mkdir /user/zw1400/trump_tweets_cleaned
-hdfs dfs -put trump_20200530.csv /user/zw1400/trump_tweets_cleaned
+hdfs dfs -put ../trump_20200530.csv /user/zw1400/trump_tweets_cleaned
 
 hadoop jar Clean.jar Clean /user/zw1400/trump_tweets_cleaned/trump_20200530.csv /user/zw1400/trump_tweets_cleaned/output
