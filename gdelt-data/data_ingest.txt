@@ -1,0 +1,35 @@
+### Commands for ingesting News Archive data.
+# I copied and pasted these commands into terminal after modifying them here.
+
+# The date range is 2016-01-10 to 2020-07-06.
+# The wget command was modified to pull in different date ranges, e.g., 2016{01..12}{01..31}
+# to keep the amount of files manageable, then I called the subsequent commands and repeated
+# the wget command for the next range of values.
+
+# Copy to local directory in DUMBO.
+wget http://data.gdeltproject.org/gdeltv3/iatv/ngrams/20{16..20}{01..12}{01..31}.FOXNEWS.2gram.txt.gz
+
+# Transfer to HDFS.
+hdfs dfs -put *.gz /user/crb616/rbda_proj/fox_news
+
+# Unzip in HDFS. I modified the range in this bash script similar to the wget command above.
+./unzip-files.sh
+
+# Throughout the process I spot checked the unzip process by using head and tail
+# to see that the files were properly unzipped and added.
+# For example:
+
+## These commands:
+hdfs dfs -cat rbda_proj/fox_news/20160110.FOXNEWS.2gram.txt.gz | gunzip -d | head
+hdfs dfs -cat rbda_proj/fox_news/20160131.FOXNEWS.2gram.txt.gz | gunzip -d | tail
+
+## Should match these:
+hdfs dfs -cat rbda_proj/fox_news/2016+01.txt | head
+hdfs dfs -cat rbda_proj/fox_news/2016+01.txt | tail
+
+# Clean-up local folder
+# I called the unzip and rm commands then repeated wget for the next date range.
+rm *.gz
+
+# Clean-up HDFS .txt.gz files once all dates are done.
+hdfs dfs -rm -r rbda_proj/fox_news/*.txt.gz
