@@ -1,0 +1,50 @@
+Trump Twitter Archive Data Schema
+
+0. source: 
+	data type: text;
+	description: the device or app the subject used to post this tweet; 
+	possible values: "Twitter Web App", "Media Studio", "Twitter Ads", "Twitter for Android", "Twitter for iPad", "Twitter for iPhone", "Twitter Web Client";
+	max length: 19 characters
+	uses: this field can be used to analyze which type of device the subject uses to tweet more often and how the device used is correlated to certain metrics of the tweet. 
+
+1. text:
+	data type: text; 
+	description: the content of the tweet; 
+	max length: 321 characters;
+	average length: 154.92 characters;
+	uses: this field can be used to extract the topics of the subject's tweet; 
+
+2. created_at:
+	data type: date;
+	description: the date and time the tweet is posted
+	range: from Jan 20, 2017 - May 30, 2020;
+	uses: the time part of this field will be dropped and the date is used to group tweets;
+
+3. retweet_count: 
+	data type: int;
+	description: the number of times a tweet was retweeted;
+	max value: 369,530;
+	min value: 0;
+	average value: 17,786.53; 
+	uses: an indicator of the amount of attention the tweet draws
+
+4. fav_count: 
+	data type: int; 
+	description: the number of times a tweet was favorited; 
+	max value: 879,647;
+	min value: 0;
+	average value: 58,736.12;
+	uses: an indicator of the amount of attention the tweet draws as well as how agreeable the content is to the audience; 
+
+5. is_retweet: 
+	data type: Boolean;
+	description: true if the tweet is a retweet, false otherwise; 
+	possible values: true, false;
+	percentage of retweets: 10.37%;
+	percentage of original: 89.62%;
+	uses: this field can be used to analyze to what extent retweets have different effects on the audience compared to original tweets. 
+
+6. id_str:
+	data type: text;
+	description: identifier of the tweet;
+	uses: dropped; 
