@@ -10,14 +10,14 @@ class ConsolidateCSV():
         self.consolidate()
 
     def consolidate(self):
-        self.f = open(self.data_source+"_consolidated.csv", "w")
+        self.f = open(self.data_source+"_consolidated.txt", "w")
         for date in self.date_range:
             date = extract_date(date)
             file_path = self.path + date + "-"+self.data_source+".csv"
             if os.path.exists(file_path):
                 this_file = open(file_path, "r")
                 text = this_file.read()
-                text = date + "," + text + "\n"
+                text = date + "\t" + text + "\n"
                 self.f.write(text)
                 this_file.close()
             else:
