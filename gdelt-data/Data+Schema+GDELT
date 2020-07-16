@@ -1,0 +1,25 @@
+Data Schema
+
+Field:          Date
+Example:        "2016-12-31"
+Description:    The date when the bi-gram was collected from the news station.
+Data Type:      Text
+Length:         10
+Duration:       2016-01-10 to 2020-07-06
+Purpose:        Will use the date to compare with the tweet data.
+
+Field:          bi-gram
+Example:        "war-torn country"
+Description:    A bi-gram of the number of unique words on that station in that hour
+Data Type:      Text
+Length Range:   3 - 65
+Average Length: 2.8735795
+Purpose:        Will use to see if tweets contain similiar keywords as what's mentioned on TV.
+
+Field:          bi-gram frequency
+Example:        21
+Description:    The total number of times each bi-gram appeared in captioning on that TV station.
+Data Type:      Integer
+Range:          1-271
+Average Freq:   4.2106028
+Purpose:        Will use to determine if there's an uptick in particular keywords based on tweets.
