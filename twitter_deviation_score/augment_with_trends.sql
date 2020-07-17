@@ -22,3 +22,12 @@ from trump left join twitter
 on t_date = adddate(tw_date, 1);
 
 select * from aug_trump_twitter; 
+
+create external table trump_comp(source string, t_text string, t_date string, rt_count int, fav_count int, is_retweet boolean, id string) 
+	row format delimited fields terminated by ',' 
+	location '/user/zw1400/impalaInput/complete_trump';
+
+create table trump_complete as
+	select trump.id as id, trump.t_date as t_date, t_text, rt_count, fav_count, is_retweet, source
+	from trump inner join trump_comp
+	on trump.id = trump_comp.id;
