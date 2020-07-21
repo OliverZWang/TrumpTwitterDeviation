@@ -5,6 +5,8 @@ This project attempts to identify a pattern of President Trump's tweets where he
 
 ## Directory Structure
 
+![](./documents/directory_structure.png)
+
 ## Running
 
 ### Trend Scraping
