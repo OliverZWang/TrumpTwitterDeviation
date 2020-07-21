@@ -15,5 +15,5 @@ jar -cvf Clean.jar *.class
 
 for I in $(seq 16 20)
 do
-    hadoop jar Clean.jar Clean /user/"$USER"/rbda_proj/clean_in/*.txt /user/crb616/rbda_proj/clean_out/
+    hadoop jar Clean.jar Clean /user/"$USER"/rbda_proj/raw/fox_news/*.txt /user/"$USER"/rbda_proj/clean/fox_news/20${I}/
 done
