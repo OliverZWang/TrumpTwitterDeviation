@@ -5,3 +5,4 @@ __pycache__/
 trends_scraper/trends_data
 .sh
 gdelt-data/.DS_Store
+.DS_Store

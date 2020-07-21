@@ -1,0 +1,90 @@
+.
+├── README.md
+├── app_code
+│   ├── twitter_analytics
+│   │   ├── analysis0.sql
+│   │   ├── analysis1.sql
+│   │   └── outputs
+│   │       ├── analysis1_output.txt
+│   │       ├── avg_daily_dev.csv
+│   │       ├── daily_count.csv
+│   │       └── mark_dev_output.txt
+│   └── twitter_deviation_score
+│       ├── MarkDev.java
+│       ├── MarkDev.sh
+│       ├── MarkDevMapper.java
+│       ├── augment_with_trends.sql
+│       └── trump_with_trends.txt
+├── data_ingest
+│   ├── gdelt
+│   │   ├── Data+Schema+GDELT
+│   │   ├── data_ingest.txt
+│   │   └── unzip-files.sh
+│   ├── trump_twitter_archive
+│   │   ├── schema_trump.txt
+│   │   └── trump_20200530.csv
+│   └── twitter_google_trends
+│       ├── ConsolidateCSV.py
+│       ├── TrendPageScraper.py
+│       ├── delete_empty.py
+│       ├── google_consolidated.txt
+│       ├── reformat_trends.py
+│       ├── scraper.py
+│       └── twitter_consolidated.txt
+├── documents
+│   ├── design_diagram.pdf
+│   └── directory_structure.png
+├── etl_code
+│   ├── gdelt
+│   │   ├── Clean.java
+│   │   ├── CleanMapper.java
+│   │   ├── CleanReducer.java
+│   │   ├── clean.sh
+│   │   ├── dump.sh
+│   │   ├── go.sh
+│   │   ├── log.sh
+│   │   ├── run.sh
+│   │   └── setup.sh
+│   ├── trump_twitter_archive_0
+│   │   ├── Clean.java
+│   │   ├── Clean.sh
+│   │   ├── CleanMapper.java
+│   │   └── CleanReducer.java
+│   └── trump_twitter_archive_1
+│       ├── Clean.java
+│       ├── CleanMapper.java
+│       └── clean.sh
+├── out.txt
+├── profiling_code
+│   ├── gdelt
+│   │   ├── Profile.java
+│   │   ├── ProfileMapper.java
+│   │   ├── ProfileReducer.java
+│   │   ├── clean.sh
+│   │   ├── dump.sh
+│   │   ├── go.sh
+│   │   ├── log.sh
+│   │   ├── run.sh
+│   │   └── setup.sh
+│   └── trump_twitter_archive
+│       ├── Profile.java
+│       ├── Profile.sh
+│       ├── ProfileMapper.java
+│       └── ProfileReducer.java
+├── research
+│   ├── More\ than\ just\ a\ tweet_\ The\ unconscious\ impact\ of\ forming\ parasocial\ relationships\ through\ social\ media_.pdf
+│   ├── Polls\ and\ Elections.pdf
+│   ├── Ratioing\ the\ President.pdf
+│   ├── Real-Time\ Classification\ of\ Twitter\ Trends.pdf
+│   ├── Trump,\ Twitter,\ and\ news\ media\ responsiveness-.pdf
+│   ├── Trump,\ Twitter,\ and\ the\ First\ Amendment.pdf
+│   ├── Tweet\ Specific\ Extractive\ Summarization\ Framework\ towards\ Trending\ Topic\ Analysis\ .pdf
+│   ├── Twitter\ Versus\ the\ Traditional\ Media-\ A\ Survey\ Experiment\ Comparing\ Public\ Perceptions\ of\ Campaign\ Messages\ in\ the\ 2016\ U.S.\ Presidential\ Election.pdf
+│   └── �\200\230Going\ negative�\200\231-\ An\ APPRAISAL\ analysis\ of\ the\ rhetoric\ of\ Donald\ Trump\ on\ Twitter.pdf
+└── screenshots
+    ├── analysis_impala.png
+    ├── analysis_mapreduce_mark_deviation.png
+    ├── cleaning.png
+    └── profile.png
+
+18 directories, 69 files
