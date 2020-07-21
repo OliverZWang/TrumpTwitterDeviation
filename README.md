@@ -95,8 +95,19 @@ impala-shell -i compute-1-1 -f ./analysis1.sql -B -o analysis1.txt
 4. The table information is included either in comment in the .sql files or in the printed messages. 
 5. The results are included in ```/app_code/twitter_analytics/outputs```.
 
+### GDELT TV Caption Dataset
 
+The dataset download steps are at (```TrumpTwitterDeviation/data_ingest/gdelt/data_ingest.txt```).
 
+In the same directory, ```Data+Schema+GDELT``` describes the schema. The ```unzip-files.sh``` is used for unzipping the files into DUMBO. 
+
+#### ETL Logic
+
+The code can be found at ```TrumpTwitterDeviation/etl_code/gdelt/```. The go.sh will run the other scripts within the directory which setup input/output directories then run the ETL code to clean the GDELT dataset. Go through the ```*.sh``` files to ensure the input/output directories are correct for your setup, since it's dependent on what you decided to setup in HDFS.
+
+#### Profiling Logic
+
+The code can be found at ```TrumpTwitterDeviation/profiling_code/gdelt/```. The go.sh will run the other scripts within the directory which setup input/output directories then run the ETL code to clean the GDELT dataset. Go through the ```*.sh``` files to ensure the input/output directories are correct for your setup, since it's dependent on what you decided to setup in HDFS.
 
 
 
