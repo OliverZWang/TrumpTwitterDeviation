@@ -107,8 +107,11 @@ Please move this file to HDFS using the ```hdfs dfs -put``` command. We refer to
 impala-shell -B -o trump_with_trends.txt --output_delimiter=';'
 ```
 so that the output of the query in line 24 is written to ```trump_with_trends.txt```.
+
 5. Move ```trump_with_trends.txt``` to HDFS using the ```hdfs dfs -put``` command. 
+
 6. Modify ```MarkDev.sh``` in this directory so that on line 9 the input file to he MapReduce job is ```trump_with_trends.txt``` and it outputs to desired location. We refer to the output as "mark_dev_output.txt". 
+
 7. "mark_dev_output.txt" has the format "tweet_id  date  deviate_mark". If a tweet is determined to deviate from twitter trends, deviate_mark is set to 1. Otherwise it is set to 0.
 
 ### Analysis
