@@ -67,9 +67,9 @@ In the same directory, ```schema_trump.txt``` describes the dataset.
 
 Please move this file to HDFS using the ```hdfs dfs -put``` command. We refer to this file as "TRUMP_COMPLETE" and the path to this file as "/path/to/TRUMP_COMPLETE" in this document for convenience. 
 
-### Profiling
+### Trump Twitter Profiling
 
-1. Navigate to ```profiling_code```. There should be 4 files in the directory, ```Profile.java Profile.sh ProfileMapper.java ProfileReducer.java```. 
+1. Navigate to ```/profiling_code/trump_twitter_archive/```. There should be 4 files in the directory, ```Profile.java Profile.sh ProfileMapper.java ProfileReducer.java```. 
 2. Open ```Profile.sh``` in your favorite editor. change the output directory of the ```hdfs dfs -mkdir``` command to desired destination (line 10). 
 3. Change the destination of the ```hdfs dfs -put``` command to desired location (line 11). Please also make sure the input directory (path to ```trump_20200530.csv```) is correct. 
 4. Modify the input and output arguments in line 13 (```hadoop jar Profile.jar ...```) according to previous steps. 
@@ -81,7 +81,7 @@ Please move this file to HDFS using the ```hdfs dfs -put``` command. We refer to
 
 ### Data Cleaning 0
 
-1. Navigate to ```/etl_code/trump_clean0/```. There should be 4 files in the directory, ```Clean.java Clean.sh CleanMapper.java CleanReducer.java```
+1. Navigate to ```/etl_code/trump_twitter_archive_0/```. There should be 4 files in the directory, ```Clean.java Clean.sh CleanMapper.java CleanReducer.java```
 2. Make the same modifications to ```Clean.sh``` as the ones made to ```Profile.sh``` in the previous section. 
 3. Execute the bash script
 ```
@@ -92,7 +92,7 @@ Please move this file to HDFS using the ```hdfs dfs -put``` command. We refer to
 
 ### Data Cleaning 1
 
-1. Navigate to ```/etl_code/trump_clean1/```. There should be 3 files in the directory, ```Clean.java Clean.sh CleanMapper.java```
+1. Navigate to ```/etl_code/trump_twitter_archive_1/```. There should be 3 files in the directory, ```Clean.java Clean.sh CleanMapper.java```
 2. Follow the same procedure in the previous section - "Data Cleaning 0" to execute this MapReduce job
 3. The output file has the format "tweet_id  data  keywords" that contains the keywords of each tweet. 
 4. We refer to the output of this job as "TRUMP_KEYWORDS" for convenience.
