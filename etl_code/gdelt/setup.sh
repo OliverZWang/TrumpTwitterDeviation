@@ -5,4 +5,4 @@ hdfs dfs -mkdir rbda_proj/clean
 hdfs dfs -mkdir rbda_proj/clean/fox_news
 
 # Verify what is in the input data directory
-hdfs dfs -ls rbda_proj/raw
+hdfs dfs -ls rbda_proj/raw/fox_news
