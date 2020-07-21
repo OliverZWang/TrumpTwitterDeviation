@@ -105,17 +105,20 @@ In the same directory, ```Data+Schema+GDELT``` describes the schema. The ```unzi
 
 The code can be found at ```TrumpTwitterDeviation/etl_code/gdelt/```. The go.sh will run the other scripts within the directory which setup input/output directories then run the ETL code to clean the GDELT dataset. Go through the ```*.sh``` files to ensure the input/output directories are correct for your setup, since it's dependent on what you decided to setup in HDFS.
 
+```clean.sh``` : cleans up the previous runs output directory
+```dump.sh```  : cat out one of the part files for this run
+```go.sh```    : runs all the other ```*.sh``` files in this directory except ```log.sh```
+```log.sh```   : used for opening the log for the run
+```run.sh```   : executes the ETL code
+```setup.sh``` : sets up the output directory in HDFS for the current run
+
 #### Profiling Logic
 
-The code can be found at ```TrumpTwitterDeviation/profiling_code/gdelt/```. The go.sh will run the other scripts within the directory which setup input/output directories then run the ETL code to clean the GDELT dataset. Go through the ```*.sh``` files to ensure the input/output directories are correct for your setup, since it's dependent on what you decided to setup in HDFS.
+The code can be found at ```TrumpTwitterDeviation/profiling_code/gdelt/```. The ```go.sh``` will run the other scripts within the directory which setup input/output directories then run the ETL code to clean the GDELT dataset. Go through the ```*.sh``` files to ensure the input/output directories are correct for your setup, since it's dependent on how you decided to setup your files in HDFS. 
 
-
-
-
-
-
-
-
-
-
-
+```clean.sh``` : cleans up the previous runs output directory
+```dump.sh```  : cat out one of the part files for this run
+```go.sh```    : runs all the other ```*.sh``` files in this directory except ```log.sh```
+```log.sh```   : used for opening the log for the run
+```run.sh```   : executes the ETL code
+```setup.sh``` : sets up the output directory in HDFS for the current run
